@@ -7,6 +7,7 @@
 	</div>
 	<div class="span-6 last">
 		<div id="sidebar">
+			<?php $this->widget('HelloWidget');?>
 			<?php if(!Yii::app()->user->isGuest) $this->widget('UserMenu'); ?>
 
 			<?php $this->widget('TagCloud', array(
@@ -16,6 +17,7 @@
 			<?php $this->widget('RecentComments', array(
 				'maxComments'=>Yii::app()->params['recentCommentCount'],
 			)); ?>
+			
 		</div><!-- sidebar -->
 	</div>
 </div>
